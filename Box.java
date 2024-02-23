@@ -7,18 +7,18 @@ public class Box{
         this.contents.add(truc);
     }
     public int nbObjet() {
-        this.contents.size();
+        return this.contents.size();
     }
-    public void retire( String objetARetirer){
-        throw ThingNotFound
+    public void retire(String objetARetirer)
+        throws ThingNotFound 
         {
-            if (???){
-
+            if (this.contents.contains(objetARetirer)){
+                this.contents.remove(objetARetirer);    
             } else {
-                
+                throw new ThingNotFound();
             }
-        }
-    }    
+    }
+    
 }
 class Thing{
     String name;
